@@ -27,11 +27,12 @@ int main(int argc, char** argv) {
 		MPI_Recv(&recieved_data, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 		std::cout << "rank: " << world_rank << " recieved data from rank: " << recieved_data
 			<< std::endl;
-	}
+	}
+
 
 
 	MPI_Finalize();
 	// simple hello world just to verify that everything is working for us
 	std::cout << "hello world" << std::endl;
 	return 0;
-}
+}

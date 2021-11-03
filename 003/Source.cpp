@@ -62,5 +62,8 @@ void computeAverage() {
 	float current_average;
 
 	MPI_Recv(&message, 1, MPI_INT, (world_rank + world_size - 1) % world_size, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+	MPI_Send(&COMPUTE_AVERAGE, 1, MPI_INT, (world_rank + 1) % world_size, 0, MPI_COMM_WORLD);
+
+
 
 }

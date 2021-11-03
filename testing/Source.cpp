@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 	MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
 	std::cout << "My rank is: " << world_rank << std::endl;
-
+	std::cout << argv[0] << std::endl;
 	MPI_Finalize();
 
 }
